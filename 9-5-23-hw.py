@@ -28,3 +28,13 @@ for t in range(4):
     Anow=util.posup(v,fNet,now)
     print('---------')
     now+=tStep
+    
+'''
+print("+++++++++++++++")
+while v.y()>-2.0:
+    print(now)
+    Vnow=util.posup(pos,v,now)
+    Anow=util.posup(v,fNet,now)
+    print('---------')
+    now+=tStep
+'''
