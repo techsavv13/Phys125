@@ -7,13 +7,15 @@ A set of vPython vector utilities of my own creation
 """
 import vpython as vpy
 
+def grav():
+    return(vpy.vec(0,-9.8,0))
 
 def getvec(varname):
     vin = vpy.vec(input("gibs "+varname+" x "),input("gibs "+varname+" y "),input("gibs "+varname+" z "))
     print(varname+" "+str(vin))
     return vin
 
-def posup(ri=-0,vavg=-0,dt=-0):
+def posup(ri=-0,vavg=-0,dt=-0,ball=-0):
     if ri == -0:
         ri = getvec("ri")
     if vavg == -0:
