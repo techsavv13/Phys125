@@ -9,7 +9,7 @@ import vpython as vpy
 import vpvecutils as util
 import numpy as np 
 
-#base calues
+#base values
 m=.25
 pos=vpy.vec(0,2,0)
 v=vpy.vec(3,4,0)
