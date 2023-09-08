@@ -9,17 +9,16 @@ import vpvecutils as util
 import numpy as np 
 
 
-
 def fallgraph(r_now,m,v,dt,tnow,tmax,tstep):
 # Initial information for a ball tossed in the air. 
 # No air resistance. On the Earth.
-    '''
-    r_now = vec(0,0,0) # m
+#if 1==1:
+    #r_now = vec(0,0,0) # m
     print('r_now',r_now)
-    m = 0.1 # kg
-    v = vec(3,3,0) # m/s
-    dt = 0.1 #s
-    '''
+    #m = 0.1 # kg
+    #v = vec(3,3,0) # m/s
+    #dt = 0.1 #s
+
     p_now = m*v
     
     # Calculate forces
@@ -36,10 +35,11 @@ def fallgraph(r_now,m,v,dt,tnow,tmax,tstep):
     ball = sphere(pos=r_now, radius = 0.01, make_trail=True)
     
                 
-    i = tnow
-    while i < tmax:
-      rate(5)
+    i = 1
+    while i < 10:
+      rate(500)
       # Calculate forces
+      print('i',i)
       Fg = m * vec(0,-9.8,0)
       F_net = Fg
       print('F_net',F_net)
@@ -53,7 +53,8 @@ def fallgraph(r_now,m,v,dt,tnow,tmax,tstep):
       r_now = r_future
       p_now = p_future
       ball.pos = r_now
-      i+=tstep
+      i=i+1
+      sleep(.1)
      
 #for export to vpysimutils
 fallgraph(vec(0,0,0),0.1,vec(3,3,0),0.1,1,10,1)
