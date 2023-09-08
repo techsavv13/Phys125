@@ -7,14 +7,18 @@ A set of vPython vector utilities of my own creation
 """
 import vpython as vpy
 
+#literally just gravity
 def grav():
     return(vpy.vec(0,-9.8,0))
 
+
+#console vector imports
 def getvec(varname):
     vin = vpy.vec(input("gibs "+varname+" x "),input("gibs "+varname+" y "),input("gibs "+varname+" z "))
     print(varname+" "+str(vin))
     return vin
 
+#position updoot formula
 def posup(ri=-0,vavg=-0,dt=-0,ball=-0):
     if ri == -0:
         ri = getvec("ri")
@@ -27,6 +31,7 @@ def posup(ri=-0,vavg=-0,dt=-0,ball=-0):
     print(rf)
     return rf
 
+#momentum gubbin
 def momentum(fnet=-0,dt=-0):
     if fnet == -0:
         fnet = getvec("fnet")
