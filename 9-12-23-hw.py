@@ -30,6 +30,7 @@ while 1==1:
     cart.pos=Cpos
     if math.isclose(Cpos.x,1.95):break
 
+sleep(.765)
 Cpos=vec(.05,.125,0)
 dv=vec(-.05,0,0)
 while 1==1:
@@ -38,5 +39,5 @@ while 1==1:
     posP=vi*tStep
     Cpos+=posP
     cart.pos=Cpos
-    if math.isclose(Cpos.x,.001):break
+    if Cpos.x<0:break
 
