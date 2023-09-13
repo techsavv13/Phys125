@@ -10,7 +10,8 @@ import vpvecutils as util
 import numpy as np 
 import math as math
 
-tracc=box(pos=vec(1,0,0),axis=vec(5,0,0),length=2,width=.25,height=.125)
+tracc=box(pos=vec(1,0,0),axis=vec(5,0,0),
+          length=2,width=.25,height=.125,color=color.gray(0.25))
 
 g=util.grav()
 m=.8
@@ -30,7 +31,7 @@ while 1==1:
     cart.pos=Cpos
     if math.isclose(Cpos.x,1.95):break
 
-sleep(.765)
+sleep(1.5)
 Cpos=vec(.05,.125,0)
 dv=vec(-.05,0,0)
 while 1==1:
