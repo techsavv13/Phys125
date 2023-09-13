@@ -42,3 +42,5 @@ while 1==1:
     cart.pos=Cpos
     if Cpos.x<0:break
 
+sleep(3)
+cart.visible=False
