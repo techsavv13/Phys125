@@ -8,17 +8,24 @@ Created on Tue Sep 12 19:11:59 2023
 from vpython import *
 import vpvecutils as util
 import numpy as np 
+import math as math
 
-tracc=box(pos=vec(0,1,0),axis=vec(1,0,0),length=2,width=.25,height=.125)
+tracc=box(pos=vec(1,0,0),axis=vec(5,0,0),length=2,width=.25,height=.125)
 
 g=util.grav()
 m=.8
+le=.1
 tStep=0.01
 
-Cpos=vec(0,.125,0)
+
+Cpos=vec(.05,.125,0)
 vi=vec(.5,0,0)
 
-cart=box(pos=Cpos,length=.1,width=.27,height=.125,color=color.purple)
+cart=box(pos=Cpos,length=le,width=.27,height=.125,color=color.purple)
 
-#while Cpos.x()<2:
-    
+while 1==1:
+    rate(100)
+    posP=vi*tStep
+    Cpos+=posP
+    cart.pos=Cpos
+    if math.isclose(Cpos.x,1.95):break

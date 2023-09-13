@@ -4,7 +4,7 @@ save_data_on_exit = True
 save_history = True
 save_non_project_files = False
 project_type = 'empty-project-type'
-recent_files = ['vpvecutils.py', 'vpsimutils.py', 'temps.py', '9-6-23-class.py', '9-5-23-hw.py', '9-7-23-hw1.py', '9-7-23-hw2.py']
+recent_files = ['vpvecutils.py', 'vpsimutils.py', 'temps.py', '9-6-23-class.py', '9-5-23-hw.py', '9-7-23-hw1.py', '9-7-23-hw2.py', '9-12-23-hw.py']
 
 [main]
 version = 0.2.0
