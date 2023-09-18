@@ -11,6 +11,8 @@ import vpython as vpy
 def grav():
     return(vpy.vec(0,-9.8,0))
 
+#1hr in seconds
+def hr():return(3600)
 
 #console vector imports
 def getvec(varname):
