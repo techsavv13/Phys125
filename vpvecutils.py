@@ -14,6 +14,15 @@ def grav():
 #1hr in seconds
 def hr():return(3600)
 
+#oofpez
+def oofpez():return(9*10**9)
+
+#electron mass
+def mE():return(9*10**-31)
+
+#electron charge
+def eChrg():return(1.6*10**-19)
+
 #console vector imports
 def getvec(varname):
     vin = vpy.vec(input("gibs "+varname+" x "),input("gibs "+varname+" y "),input("gibs "+varname+" z "))
@@ -43,4 +52,4 @@ def momentum(fnet=-0,dt=-0):
     dp = fnet*dt
     print(dp)
     return dp
-
+e=eChrg()
