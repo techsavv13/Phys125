@@ -59,9 +59,29 @@ vIp=vpy.vec(3600,1200,-2500)
 dTp=0.001
 #a
 upP=util.posup(posP,vIp,dTp)
-#b
+"""------------------------------------------------------------
+------------------------------------------------------------"""
 
+#q4
+def gammaV(v,c=util.c()):
+    return(1/math.sqrt(1-((vpy.mag(v)/c)**2)))
 
-
-
-
+mPhone=0.2215
+hDennis=12.2
+vIip=vpy.vec(3.7,2.1,-1.6)
+pIp=gammaV(vIip)*mPhone*vIip
+fNet=vpy.vec(0,-9.8,0)
+tStep=0.6
+posPhone=vpy.vec(0,0,0)
+#b/c/d1
+iPhone15=vpy.sphere(pos=posPhone,radius=.2,make_trail=True)
+for i in range(6):
+    vpy.rate(1.333)
+    tNow=tStep*i
+    print(i)
+    print(posPhone)
+    print(vIip)
+    print(pIp)
+    print(tNow)
+    util.posup(pIp,vIip,tStep)
+    
