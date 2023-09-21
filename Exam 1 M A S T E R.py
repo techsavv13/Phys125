@@ -71,17 +71,35 @@ hDennis=12.2
 vIip=vpy.vec(3.7,2.1,-1.6)
 pIp=gammaV(vIip)*mPhone*vIip
 fNet=vpy.vec(0,-9.8,0)
-tStep=0.6
+dt=0.6
 posPhone=vpy.vec(0,0,0)
-#b/c/d1
-iPhone15=vpy.sphere(pos=posPhone,radius=.2,make_trail=True)
-for i in range(6):
-    vpy.rate(1.333)
+#b
+print("+++")
+print(vIip+(fNet*dt))
+print("+++")
+#c
+print("+++")
+util.posup(posPhone,vIip+fNet,dt)
+print("+++")
+#d1
+tStep=0.02
+iPhone15=vpy.sphere(pos=posPhone,radius=.002,make_trail=True)
+vpy.sleep(1)
+for i in range(60):
+    vpy.rate(50)
     tNow=tStep*i
     print(i)
     print(posPhone)
     print(vIip)
     print(pIp)
     print(tNow)
-    util.posup(pIp,vIip,tStep)
+    vIip=util.posup(vIip,fNet,tStep)
+    pIp=util.posup(pIp,vIip,tStep)
+    iPhone15.pos=pIp
+    if i>4:
+        iPhone15.color=vpy.color.blue
+    if iPhone15.pos.y>hDennis:
+        iPhone15.color=vpy.color.red
+    vpy.sleep(.02)
+        
     
