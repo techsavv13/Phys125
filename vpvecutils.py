@@ -8,8 +8,10 @@ A set of vPython vector utilities of my own creation
 import vpython as vpy
 
 #literally just gravity
-def grav():
-    return(vpy.vec(0,-9.8,0))
+def grav():return(vpy.vec(0,-9.8,0))
+
+#speedo lite
+def c():return(3*10**8)
 
 #1hr in seconds
 def hr():return(3600)
