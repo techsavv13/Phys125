@@ -52,4 +52,4 @@ def momentum(fnet=-0,dt=-0):
     dp = fnet*dt
     print(dp)
     return dp
-e=eChrg()
+
