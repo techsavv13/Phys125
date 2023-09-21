@@ -86,7 +86,7 @@ tStep=0.02
 iPhone15=vpy.sphere(pos=posPhone,radius=.002,make_trail=True)
 vpy.sleep(1)
 for i in range(60):
-    vpy.rate(50)
+    vpy.rate(5)
     tNow=tStep*i
     print(i)
     print(posPhone)
@@ -97,9 +97,9 @@ for i in range(60):
     pIp=util.posup(pIp,vIip,tStep)
     iPhone15.pos=pIp
     if i>4:
-        iPhone15.color=vpy.color.blue
-    if iPhone15.pos.y>hDennis:
-        iPhone15.color=vpy.color.red
-    vpy.sleep(.02)
+        iPhone15.trail_color=vpy.color.orange
+    if pIp.y>hDennis:
+        iPhone15.trail_color=vpy.color.red
+    vpy.sleep(1/5)
         
     
