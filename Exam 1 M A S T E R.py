@@ -54,9 +54,12 @@ print(1*10**7)#figuring out exponent for scinote, thank the gods for monospace f
 ------------------------------------------------------------"""
 
 #q3
-
-
-
+posP=vpy.vec(0.0,-1.3,2.6)
+vIp=vpy.vec(3600,1200,-2500)
+dTp=0.001
+#a
+upP=util.posup(posP,vIp,dTp)
+#b
 
 
 
