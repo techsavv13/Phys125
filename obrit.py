@@ -23,7 +23,7 @@ Craft =  sphere(pos=Earth.pos + vec(4*REarth, 0, 0), color=color.magenta,
           make_trail = True,
           m = mCraft,
           radius  = REarth/12 )
-v0 = vec(260,0,0)
+v0 = vec(0,250,0)
 pCraft = mCraft * v0
 vcr=pCraft/mCraft
 

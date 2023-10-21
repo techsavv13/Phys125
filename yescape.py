@@ -19,11 +19,11 @@ mCraft = 175 # mass of spacecraft
 
 # Objects and initial values
 Earth = sphere(pos=vec(0,0,0), radius = REarth, m = mEarth, color=color.cyan)
-Craft =  sphere(pos=Earth.pos + vec(4*REarth, 0, 0), color=color.magenta,  
+Craft =  sphere(pos=Earth.pos + vec(REarth+4e3, 0, 0), color=color.magenta,  
           make_trail = True,
           m = mCraft,
-          radius  = REarth/12 )
-v0 = vec(260,0,0)
+          radius  = REarth/12 ) 
+v0 = vec(860,0,0)
 pCraft = mCraft * v0
 vcr=pCraft/mCraft
 
@@ -55,8 +55,8 @@ print(r)
 fgrab=-G*((mEarth*mCraft)/mag(r)**2)*hat(r)
 print(fgrab)
 
-while t < 1e7:
-  rate(500)
+while t < 8e4:
+  #rate(500)
   r=Craft.pos-Earth.pos
   fgrab=-G*((mEarth*mCraft)/mag(r)**2)*hat(r)
   pCraft += fgrab*dt
@@ -74,3 +74,4 @@ while t < 1e7:
      print("ablative lithobraking manuver executed") 
      break
   t+=dt
+if t >=8e4: print("victory")
