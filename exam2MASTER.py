@@ -9,6 +9,9 @@ from vpython import *
 import vpvecutils as util
 import numpy as np 
 import math as math
+fg=9.8#m/s^2
+
+
 """
 
 #q1
@@ -44,15 +47,27 @@ print("fnet1 (vec) \n   ",fnetast)
 print("fnet1 (mag) \n   ",mag(fnetast))
 """
 
-
+"""
 #q3
 uk=0.9
 v=2.5#m/s
 m=77.5#kg
-fg=9.8#m/s^2
 
-fFri=uk*v*m*fg
+fFri=uk*v*m
 print(fFri)
+"""
+
+
+#q4
+mr=100#kg
+R=7
+v=15
+
+fc=mr*((v**2)/R)
+print("bottom   ",fc+(mr*fg))
+print("top   ",fc-(mr*fg))
+
+
 
 
 
