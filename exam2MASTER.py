@@ -64,6 +64,14 @@ R=7
 v=15
 
 fc=mr*((v**2)/R)
+print("fc   ",fc)
+print("bottom   ",fc+(mr*fg))
+print("top   ",fc-(mr*fg))
+
+v=0.1
+
+fc=mr*((v**2)/R)
+print("fc   ",fc)
 print("bottom   ",fc+(mr*fg))
 print("top   ",fc-(mr*fg))
 
