@@ -7,16 +7,16 @@
 # Let's start with some default (for me) imports...
 #nah sis, ima do my own thing
 from cx_Freeze import setup, Executable
-#import sys
+import sys
 
-#sys.path.append('C:/Python38-32/Lib/email')
-#sys.argv.append("build")
+#sys.path.append('C:/Compiled/Phys125')
+sys.argv.append("build")
 
 dest = '/Users/Savvie/Phys125/Phys125'
 # Process the includes, excludes and packages first
 
 includes = []
-excludes = ['_gtkagg', '_tkagg', 'bsddb', 'curses', 'email', 'pywin.debugger',
+excludes = ['_gtkagg', '_tkagg', 'bsddb', 'curses', 'pywin.debugger',
             'pywin.debugger.dbgcon', 'pywin.dialogs', 'tcl',
             'Tkconstants', 'Tkinter']
 packages = []
@@ -34,9 +34,9 @@ path = []
 GUI2Exe_Target_1 = Executable(
     # what to build
     script = "obritINPUT.py",
-    initScript = None,
+    #initScript = None,
     base = 'Win32GUI',
-    targetName = "orbitSimVPY.exe",
+    #targetName = "orbitSimVPY.exe",
     icon = None
     )
 '''
@@ -83,7 +83,7 @@ setup(
                              "excludes": excludes,
                              "packages": packages,
                              "path": path,
-                             'build_exe' : r"c:\Compiled\Phys125"
+                             'build_exe' : r"C:\Compiled\Phys125"
                              }
                },
                            
