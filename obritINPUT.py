@@ -5,11 +5,6 @@ Created on Sat Oct 21 11:56:07 2023
 @author: Savvie
 """
 from vpython import *
-import vpvecutils as util
-import numpy as np 
-import math as math
-
-
 
 # Constants
 G = 6.7e-11
@@ -23,9 +18,12 @@ Craft =  sphere(pos=Earth.pos + vec(4*REarth, 0, 0), color=color.magenta,
           make_trail = True,
           m = mCraft,
           radius  = REarth/12 )
-v0 = vec(0,200,200)
+
+v0 = vec(input("need x   "),input("need y   "),input("need z   "))
 pCraft = mCraft * v0
 vcr=pCraft/mCraft
+
+print(v0)
 
 dt = 2
 t = 0
@@ -50,27 +48,37 @@ scene.autoscale = False
 # find r
 r=Craft.pos-Earth.pos
 # print it out to check
-print(r)
+#print(r)
 # continue along, and find the force.
 fgrab=-G*((mEarth*mCraft)/mag(r)**2)*hat(r)
-print(fgrab)
+#print(fgrab)
 
-while t < 1e4:
-  rate(500)
-  r=Craft.pos-Earth.pos
-  fgrab=-G*((mEarth*mCraft)/mag(r)**2)*hat(r)
-  pCraft += fgrab*dt
-  Craft.pos+=pCraft*dt
-  vcr=pCraft/mCraft
-  #print(fgrab.x)
-  xgraph.plot(t,Craft.pos.x)
-  ygraph.plot(t,Craft.pos.y)
-  zgraph.plot(t,Craft.pos.z)
-  fgraph.plot(t,mag(fgrab))
-  vxgraph.plot(t,vcr.x)
-  vygraph.plot(t,vcr.y)
-  vzgraph.plot(t,vcr.z)
-  if mag(r)<=REarth:   
-     print("ablative lithobraking manuver executed") 
-     break
-  t+=dt
+limitt=float(input("how long?   "))
+print(limitt," cycles")
+
+ctn=input("continue y/n    ")
+
+if ctn=="y":
+    
+    while t < limitt:
+      rate(500)
+      r=Craft.pos-Earth.pos
+      fgrab=-G*((mEarth*mCraft)/mag(r)**2)*hat(r)
+      pCraft += fgrab*dt
+      Craft.pos+=pCraft*dt
+      vcr=pCraft/mCraft
+      #print(fgrab.x)
+      xgraph.plot(t,Craft.pos.x)
+      ygraph.plot(t,Craft.pos.y)
+      zgraph.plot(t,Craft.pos.z)
+      fgraph.plot(t,mag(fgrab))
+      vxgraph.plot(t,vcr.x)
+      vygraph.plot(t,vcr.y)
+      vzgraph.plot(t,vcr.z)
+      if mag(r)<=REarth:   
+         print("ablative lithobraking manuver executed") 
+         break
+      t+=dt
+    print("Done")
+elif ctn == "n":print("execution terminated")
+else:print("unconventonal\ni like it")
