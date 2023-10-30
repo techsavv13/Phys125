@@ -33,7 +33,7 @@ path = []
 
 GUI2Exe_Target_1 = Executable(
     # what to build
-    script = "obritINPUT.py",
+    script = "OrbitsimVPY.py",
     #initScript = None,
     base = 'Win32GUI',
     #targetName = "orbitSimVPY.exe",
