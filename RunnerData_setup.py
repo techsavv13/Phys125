@@ -7,7 +7,7 @@
 # Let's start with some default (for me) imports...
 #nah sis, ima do my own thing
 from cx_Freeze import setup, Executable
-import sys
+import sys,os
 
 #sys.path.append('C:/Compiled/Phys125')
 sys.argv.append("build")
