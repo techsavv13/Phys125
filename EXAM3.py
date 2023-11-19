@@ -88,4 +88,26 @@ print(us)
 vi=mball*us
 print(vi)
 
-fallgraph(vec(0,0.06,0),mball,vec(0,vi,0),0.001,1,10,1)
+#fallgraph(vec(0,0.06,0),mball,vec(0,vi,0),0.001,1,10,1)
+
+print("\n----------------------------\n")
+
+#q3
+
+m=0.038
+r=6.7
+ft=0.2
+dyo=0.52
+
+mi=.5*m*(r**2)
+print(mi,"\n")
+
+fg=9.8*m
+print(fg)
+fnet=fg-ft
+print(fnet,"\n")
+
+krot=.5*mi*(dyo**2)
+print(krot)
+
+
