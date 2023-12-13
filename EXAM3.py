@@ -108,6 +108,8 @@ fnet=fg-ft
 print(fnet,"\n")
 
 krot=.5*mi*(dyo**2)
+
 print(krot) 
+
 
 
