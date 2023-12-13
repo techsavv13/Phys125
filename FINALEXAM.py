@@ -6,8 +6,8 @@ Created on Wed Dec 13 10:54:49 2023
 """
 import vpython as vpy
 
-#a.1
-
+#A.1
+'''
 soccerball = vpy.sphere(pos=vpy.vec(6,0,2),radius=0.23,
                             make_trail=True)
 mball=0.45#kg
@@ -36,3 +36,36 @@ while i < 10:
    soccerball.pos = r_now
    i+=1
    vpy.sleep(.1)
+
+
+"""
+-----------------------------------------------
+"""
+#B.2
+
+# Constants
+G = 6.7e-11
+rEarth = vpy.vec(-4e10,1.44e11,-1.2e11) # position of Earth
+mEarth = 6e24  # mass of Earth
+rSun = vpy.vec(1.2e8,6e10,0)
+mSun = 2e30 # mass of spacecraft
+
+# find r
+rS=rSun-rEarth#r for f(earth on sun)
+rE=rEarth-rSun#r for f(sun on earth)
+# print it out to check
+#print(r)
+# continue along, and find the force.
+fgrabS=-G*((mEarth*mSun)/vpy.mag(rS)**2)*vpy.hat(rS)
+fgrabE=-G*((mEarth*mSun)/vpy.mag(rE)**2)*vpy.hat(rE)
+fgrabS2=-G*((mEarth*mSun)/vpy.mag(rS*2)**2)*vpy.hat(rS*2)
+print("force from earth on sun\n vec ",fgrabS," mag ",vpy.mag(fgrabS))
+print("force from sun on earth\n vec ",fgrabE," mag ",vpy.mag(fgrabE))
+print(fgrabS+fgrabE)
+print("f for double the distance ",vpy.mag(fgrabS2))
+'''
+"""
+-----------------------------------------------
+"""
+
+
