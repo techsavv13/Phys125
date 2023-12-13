@@ -7,6 +7,7 @@ project_type = 'empty-project-type'
 
 recent_files = ['vpvecutils.py', 'obritINPUT.py']
 
+
 [main]
 version = 0.2.0
 recent_files = []
