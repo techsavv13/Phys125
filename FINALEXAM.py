@@ -67,5 +67,19 @@ print("f for double the distance ",vpy.mag(fgrabS2))
 """
 -----------------------------------------------
 """
+#D.1
 
+mp=0.25
+vp1=0
+vp2=0.6
+
+kei1=.5*mp*vp1**2
+kei2=.5*mp*vp2**2
+print(kei1)
+print(kei2)
+
+
+kef1=.5*mp*0.6**2
+print(kef1)
+print(kef1-kei2)
 
